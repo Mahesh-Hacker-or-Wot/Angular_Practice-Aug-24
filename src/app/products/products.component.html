@@ -1,0 +1,16 @@
+<div class="top">
+    <h2>Products</h2>
+</div>
+<div class="down">
+    <div class="image-division" *ngFor="let product of products">
+        <div class="img-tag">
+            <img src="{{product.image}}" alt="" width="200px" height="200px">
+        </div>
+        <div class="category-tag">{{product.category}}</div>
+        <div class="title-tag">{{product.title}}</div>
+        <div class="price-tag">{{product.price}}</div>
+        <div class="rating-tag">{{product.rating.rate}}</div>
+
+
+    </div>
+</div>

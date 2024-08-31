@@ -1,0 +1,10 @@
+<form [formGroup]="loginForm">
+
+    <label for="">Email</label>
+    <input type="text" formControlName="email">
+    <br>
+    <label for="">PassWord</label>
+    <input type="text" formControlName="password">
+    <br>
+    <button (click)="login()">Login</button>
+</form>

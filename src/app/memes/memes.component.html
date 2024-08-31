@@ -1,0 +1,11 @@
+<div class="memes-div" *ngFor="let mem of meme">
+    <div class="a">
+        <div>{{mem.name}}</div>
+        <div>{{mem.height}}</div>
+        <div>{{mem.width}}</div>
+    </div>
+    <div class="b">
+        <img src="{{mem.url}}" alt="" width="{{mem.width}}" height="{{mem.height}}">
+    
+    </div>
+</div>

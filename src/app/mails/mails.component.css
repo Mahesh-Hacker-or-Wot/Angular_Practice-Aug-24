@@ -1,0 +1,13 @@
+.a{
+    height:1%;
+    background-color: rgb(230, 147, 114);
+    margin-top: 3px;
+}
+.pass{
+    color:grey;
+}
+.fail{
+
+    color: black ;
+    
+}

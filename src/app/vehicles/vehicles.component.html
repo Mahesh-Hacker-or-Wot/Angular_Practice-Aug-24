@@ -1,0 +1,42 @@
+<p>vehicles works!</p>
+
+
+<input type="text" [(ngModel)]="term" (keyup)="getFilteredVehicles()">
+
+<table border="1">
+    <thead>
+        <th>vehicle</th>
+        <th>manufacture</th>
+        <th>model</th>
+        <th>type</th>
+        <th>fuel</th>
+        <th>color</th>
+        <th>cost</th>
+        <th>id</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles ">
+            <td>{{vehicle.vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.id}}</td>
+            <td>
+                <button (click)="view(vehicle.id)">View</button>
+                <button (click)="edit(vehicle.id)">Edit</button>
+
+                <button (click)="delete(vehicle.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <h2 class="text-page">Pages</h2>
+    <button [(ngModel)]="term1" (click)="getPage2()">2</button>
+    <button [(ngModel)]="term2" (click)="getPage3()">3</button>
+    <button  [(ngModel)]="term3" (click)="getPage4()">4</button>
+
+
+</table>

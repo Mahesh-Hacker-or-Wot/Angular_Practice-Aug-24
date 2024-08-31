@@ -1,0 +1,39 @@
+.top{
+    width: 100%;
+    height: 20%;
+    background-color: cadetblue;
+}
+.down{
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-division{
+    width: 30%;
+    height: 30%;
+    
+}
+
+.img-tag{
+    width: 100%;
+    height: 70%;
+}
+.category-tag{
+    width: 100%;
+    height: 10%;
+}
+.rating-tag{
+    width: 100%;
+    height: 10%;
+    position: relative;
+    top: -100px;
+
+}
+.title-tag{
+    width: 100%;
+    height: 10%;
+
+}
+.price-tag{
+    width: 100%;
+    height: 10%;
+}

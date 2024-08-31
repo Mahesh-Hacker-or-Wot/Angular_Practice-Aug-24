@@ -1,0 +1,34 @@
+<p>bankaccounts works!</p>
+
+<input type="text" [(ngModel)]="term" (keyup)="getFilteredBankAccounts()">
+<button [(ngModel)]="term1" (keyup)="getFilteredAccountName()">Sort AccountName</button>
+<button [(ngModel)]="term2" (keyup)="getFilteredAvailableBalance()">Sort AvailableBalance</button>
+<button [(ngModel)]="term3" (keyup)="getFilteredAccountNumber()">Sort AccountNumbert</button>
+<button [(ngModel)]="term4" (keyup)="getFilteredCity()">Sort City</button>
+<button [(ngModel)]="term5" (keyup)="getFilteredId()">Sort ID</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Account_Name</th>
+            <th>Available_Balance</th>
+            <th>Account_Number</th>
+            <th>City</th>
+            <th>Profile_Picture</th>
+            <th>Id</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let bankaccount of bankaccounts">
+            <td>{{bankaccount.account_name}}</td>
+            <td>{{bankaccount.available_balance}}</td>
+            <td>{{bankaccount.account_number}}</td>
+            <td>{{bankaccount.city}}</td>
+            <td>{{bankaccount.profile_picture}}</td>
+            <td>{{bankaccount.id}}</td>
+
+        </tr>
+
+    </tbody>
+</table>

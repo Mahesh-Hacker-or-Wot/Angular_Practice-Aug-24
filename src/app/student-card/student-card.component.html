@@ -1,0 +1,63 @@
+<div class="top">
+    <input type="text" [(ngModel)]="term" (keyup)="getFilteredStudents()">
+  
+    <label for="">Column</label>
+    <select name="" id="" [(ngModel)]="column" >
+        <option value="name">name</option>
+        <option value="city">city</option>
+    </select>
+    <label for="">Order</label>
+    <select name="" id="" [(ngModel)]="order" >
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+    </select>
+    <button (click)="sort()">Sort</button>
+
+    <input type="text" [(ngModel)]="limit">
+    <input type="text" [(ngModel)]="page">
+  
+    
+    <button (click)="getPagination()">Page</button>
+   
+    
+    
+</div>
+<div class="down">
+    <div class="a" *ngFor="let student of students">
+        <div class="b">
+            <div class="b1">
+                <div class="logo">
+                    <img src="{{student.school_logo}}" alt="" width="50px" height="50px">
+                </div>
+                <div class="b11">
+                    <div class="school-name">{{student.school_name}}</div>
+                    <div>{{student.school_city}}</div>
+                    <div>{{student.school_pin}}</div>
+
+                </div>
+            
+                
+        </div>
+
+        <div class="c">
+            <div class="c1">
+                <ul>
+                    <li>Name:{{student.name}}</li>
+                    <li>Phone:{{student.phone}}</li>
+                    <li>City:{{student.city}}</li>
+                    <li>Dob:{{student.dob}}</li>
+                    <li>Email:{{student.email}}</li>
+
+                </ul>
+                
+           
+            </div>
+            <div class="c2">
+                <img src="{{student.profile_picture}}" alt="" width="150px" height="150px">
+
+               
+                
+            </div>
+        </div>
+    </div>
+</div>
